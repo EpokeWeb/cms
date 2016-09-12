@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+    {{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+{% include 'couverture.html' %}
+    <section class="row">
+        <div class="container">
+            <div class="row page_service_details contentRow">
+                <div class="col-sm-9 service_descs">
+                    <div class="row m0">
+                       <div class="row m0">
+                           <div class="fleft fpara">
+                               <h3 class="sv_titile">{{ title }}</h3>
+                               <div class="sv_about">
+                                   <p class="f12">Aujourd’hui, il existe de nombreux canaux de communications pour rejoindre votre clientèle. À titre d’exemples, placer des annonces dans les résultats d’un moteur de recherche pour inciter les visiteurs à cliquer sur message pour être redirigé vers le site web de votre entreprise, profiter de certaines tribunes (réseaux sociaux) pour signaler les bons coups de votre entreprise ou de ses dirigeants, être présent sur différents réseaux sociaux, utiliser des bannières ou réaliser des campagnes courriels sont autant de moyens qui peuvent être utilisés par les entreprises.<br><br>
+
+                                   Certes, depuis l’adoption, en juillet 2014, de la <a href="http://combattrelepourriel.gc.ca/eic/site/030.nsf/fra/accueil">Loi canadienne C-28</a>, les entreprises sont plus frileuses d’employer ce moyen de communication. Pourtant, l’envoi de courriels demeure une excellente tactique comparativement à d’autres outils qui génèrent des résulats moindres. À titre comparatif, signalons qu’une page d’entreprise sur Facebook va atteindre en entre 5% et 6% de votre audience de manière organique pour une communauté de 10 000 abonnés. L’engagement des membres au sein de cette communauté est de l’ordre de 1% à 2%. <br><br>
+
+                                   Dans un rapport publié en 2015 par la firme <a href="http://www.emailmonday.com/wp-content/uploads/2015/04/National-client-email-2015-DMA.pdf">Direct Marketing Association d’Angleterre</a>, on estime que le retour sur investissement (ROI) du marketing par courriel était de 74 $ en 2014. Cela signifie que pour chaque dollar investi cela rapporte 74 $.<br><br>
+
+                                   Les avantages liés à l’utilisation d’une campagne courriels sont nombreux. Contrairement aux réseaux sociaux où votre message apparaît sur un fil de nouvelles, chaque courriel est traité individuellement. Il s’agit d’une occasion unique où vous vous adressez directement à l’internaute. <br><br>
+
+                                   Par rapport à l’envoi d’une lettre ou d’une carte privilège par la poste, le coût d’envoi est minime. Vous pouvez paramétrer la période où vous souhaitez que votre message soit lu. Il est démontré que cette façon de faire permet de fidéliser votre clientèle.<br><br> 
+
+                                   On estime qu’environ 8 personnes sur 10 préfèrent recevoir des promotions par courriel plutôt que par un réseau social.<br><br>
+
+                                   Réaliser du marketing par courriel exige le respect de plusieurs règles telles que : l’obtention du consentement tacite ou exprès du consommateur à recevoir des messages de l’entreprise. Le client doit indiquer clairement qu’il est intéressé à recevoir les communications de l’entreprise. Elle doit offrir à l’internaute la possibilité de se désabonner en tout temps. Le fardeau de la preuve au sujet du consentement tacite ou exprès du client incombe à l’entreprise. <br><br>
+
+                                   La Loi C-28 se veut un cadre juridique où les responsabilités des parties sont bien définies. Elle vient baliser les bonnes pratiques d’affaires de manière à s’assurer que les communications commerciales avec le consommateur soient davantage civilisées et que relation d’affaires entre le client et l’entreprise dépende de la volonté du consommateur. <br><br>
+
+                                   Au-delà de l’aspect juridique, nous devons considérer d’autres aspects reliés à la formulation des messages et des plateformes sur lesquelles l’entreprise veut être présente. Chez CSM Conseils stratégiques en marketing web, nous sommes en mesure de vous accompagner ou de vous représenter auprès de fournisseurs de services habiletés à vous offrir un service de qualité.
+
+                                 </p>
+<!--                                    <ul class="list-unstyled">
+                                       <li><i class="fa fa-check"></i> Unrivalled levels of service</li>
+                                       <li><i class="fa fa-check"></i> Proven results in competitive markets</li>
+                                       <li><i class="fa fa-check"></i> Real metrics - no marketing fluff!</li>
+                                   </ul> -->
+                               </div>
+                           </div>
+                       </div>
+                      
+<!--                            <ul class="nav sv_subjects">
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/1.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Keyword Research</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/2.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Website Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/3.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Competitor Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/4.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Backlink Building</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/5.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Analytics</div>
+                                    </div>
+                                </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/6.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Web 2.0/Social Media Management</div>
+                                   </div>
+                               </li>
+                           </ul> -->
+                       
+<!--                        <div class="row m0 graph_row">
+                           <h5 class="sv_subtitle_center">Ranking Page Authority Scores</h5>
+                           <img src='{% static "images/icons/services/details/graph.png" %}' alt="" class="graph img-responsive">
+                       </div>
+                       <div class="row m0">
+                           <h4 class="sv_subtitle">Some of Our Results</h4>
+                           <div class="row m0 funFacts">
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/7.png" %}' alt=""> <span class="counter">400</span>%</h3>
+                                   <h6>Increase in Page 1 Rankings</h6>
+                               </div>
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/8.png" %}' alt=""> <span class="counter">160</span>%</h3>
+                                   <h6>Increase in Organic Traffic</h6>
+                               </div>
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/9.png" %}' alt=""> <span class="counter">58</span>%</h3>
+                                   <h6>Average visit duration</h6>
+                               </div>
+                           </div>
+                       </div> -->
+                    </div>
+                </div>
+                {% include 'services/sidebar.html' %}
+            </div>
+        </div>
+    </section>
+
+{% include 'calltoaction.html' %}
+{% endblock content %}
+

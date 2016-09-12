@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+    {{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+{% include 'couverture.html' %}
+    <section class="row">
+        <div class="container">
+            <div class="row page_service_details contentRow">
+                <div class="col-sm-9 service_descs">
+                    <div class="row m0">
+                       <div class="row m0">
+                           <div class="fleft fpara">
+                               <h3 class="sv_titile">{{ title }}</h3>
+                               <div class="sv_about">
+                                   <p class="f12">...</p>
+<!--                                    <ul class="list-unstyled">
+                                       <li><i class="fa fa-check"></i> Unrivalled levels of service</li>
+                                       <li><i class="fa fa-check"></i> Proven results in competitive markets</li>
+                                       <li><i class="fa fa-check"></i> Real metrics - no marketing fluff!</li>
+                                   </ul> -->
+                               </div>
+                           </div>
+                       </div>
+                       <div class="row m0">
+                           <h4 class="sv_subtitle">...</h4>
+                           <p class="f13">...<br><br>
+                           ...
+                           </p>
+<!--                            <ul class="nav sv_subjects">
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/1.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Keyword Research</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/2.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Website Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/3.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Competitor Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/4.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Backlink Building</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/5.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Analytics</div>
+                                    </div>
+                                </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/6.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Web 2.0/Social Media Management</div>
+                                   </div>
+                               </li>
+                           </ul> -->
+                       </div>
+<!--                        <div class="row m0 graph_row">
+                           <h5 class="sv_subtitle_center">Ranking Page Authority Scores</h5>
+                           <img src='{% static "images/icons/services/details/graph.png" %}' alt="" class="graph img-responsive">
+                       </div>
+                       <div class="row m0">
+                           <h4 class="sv_subtitle">Some of Our Results</h4>
+                           <div class="row m0 funFacts">
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/7.png" %}' alt=""> <span class="counter">400</span>%</h3>
+                                   <h6>Increase in Page 1 Rankings</h6>
+                               </div>
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/8.png" %}' alt=""> <span class="counter">160</span>%</h3>
+                                   <h6>Increase in Organic Traffic</h6>
+                               </div>
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/9.png" %}' alt=""> <span class="counter">58</span>%</h3>
+                                   <h6>Average visit duration</h6>
+                               </div>
+                           </div>
+                       </div> -->
+                    </div>
+                </div>
+                {% include 'services/sidebar.html' %}
+            </div>
+        </div>
+    </section>
+
+
+{% include 'calltoaction.html' %}
+{% endblock content %}
+

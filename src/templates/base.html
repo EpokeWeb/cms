@@ -1,0 +1,74 @@
+{% load staticfiles %}
+{% if not request.user.is_authenticated %}
+<center>Site en construction</center>
+{% else %}
+<!DOCTYPE html>
+<!--DOCTYPE html -->
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="CSM - Conseil Stratégique Marketing Web est une entreprise spécialisée dans le marketing web et les stratégies de référencement (SEO) située dans l'Est du Québec."/>
+        <meta name="keywords" content="SEO, Marketing, Référencement, Développement web, Site web, trafic, mots clés, Email marketing, médias sociaux">
+        <meta name="author" content="Époke Web">
+
+        <!-- meta Facebook -->          
+        <meta property="og:url" content="http:/http://csm-conseilsstrategiquesmarketingweb.ca/" />
+        <meta property="og:title" content="Conseils strategiques marketing web" />
+        <meta property="og:type" content="website"/>  
+        <meta property="og:image" content="http://csm-conseilsstrategiquesmarketingweb.ca/logo.gif" %}' /> 
+        <meta property="og:site_name" content="CSM - Conseils strategiques marketing web"/>
+        <meta property="og:description" content="CSM - Conseil Stratégique Marketing Web est une entreprise spécialisée dans le marketing web et les stratégies de référencement (SEO) située dans l'Est du Québec."/>
+
+         <!--Favicons-->
+        <link rel="icon" type="image/png" %}' sizes="32x32" href="favicon/favicon-32x32.png" %}'>
+        <link rel="icon" type="image/png" %}' sizes="96x96" href="favicon/favicon-96x96.png" %}'>
+        <link rel="icon" type="image/png" %}' sizes="16x16" href="favicon/favicon-16x16.png" %}'>
+        <link rel="manifest" href="favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" %}'>
+        <meta name="theme-color" content="#ffffff">   
+
+        <title>CSM  | {% block head_title %}{% endblock head_title %}</title>
+            
+        {% include "css.html" %}
+            
+        <style>{% block style %}{% endblock style %}</style>
+        
+        {% block head_extra %} {% endblock head_extra %}
+    </head>
+
+<body class="default home{% block body_class %}{% endblock body_class %}">
+
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+{% include "messages_display.html" %}
+
+
+{% include "navbar.html" %}
+
+
+{% block content %}{% endblock content %}
+
+
+{% include "footer.html" %}
+{% include "javascript.html" %}
+
+
+</body>
+</html>
+{% endif %}
+
+
+
+

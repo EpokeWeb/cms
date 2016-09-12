@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+    {{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+{% include 'couverture.html' %}
+   <section class="row">
+        <div class="container">
+            <div class="row page_services contentRow">
+                <div class="row m0 title_row">
+                    <h2>{{ title }}</h2>
+                    <h5>Notre passion? Développer de nouvelles stratégies, innover, expérimenter et améliorer. Notre mission est de maximiser la réputation, les performances et le positionnement Web de nos clients.</h5>
+                </div>
+                <div class="row m0">
+                    <div class="col-sm-4 service_box">
+                        <div class="row service_box_inner">
+                            <div class="row preview_box">
+                                <img src='{% static "images/icons/services/1.png" %}' alt="">
+                                <h6>Audit web</h6>
+                            </div>
+                            <div class="row hover_box">
+                                <div class="row m0 inner">
+                                    <h6>Audit web</h6>
+                                    <div class="about">Nous utilisons différents outils d’analyse pour évaluer la performance de votre site Web et identifier les points qui doivent faire l’objet d’une amélioration. Aujourd’hui, avoir un site web de qualité est obligatoire pour construire à long terme votre image de marque. Articuler une stratégie marketing autour d’un site web inefficace constitue une pure perte de temps.</div>
+                                    <a href="{% url 'services:audit_web' %}" class="read_more">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 service_box">
+                        <div class="row service_box_inner">
+                            <div class="row preview_box">
+                                <img src='{% static "images/icons/services/2.png" %}' alt="">
+                                <h6>Services SEO</h6>
+                            </div>
+                            <div class="row hover_box">
+                                <div class="row m0 inner">
+                                    <h6>Services SEO</h6>
+                                    <div class="about">Le SEO (Search Engine Optimization) se définit comme un ensemble de méthodes et techniques qui contribuent à améliorer la visibilité de votre site web dans le but d’obtenir un meilleur positionnement dans les pages de résultats des moteurs de recherche. Chez CSM Conseils stratégiques en marketing web nous connaissons la valeur des mots clés pour mettre en valeur votre site web.</div>
+                                    <a href="{% url 'services:seo' %}" class="read_more">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 service_box">
+                        <div class="row service_box_inner">
+                            <div class="row preview_box">
+                                <img src='{% static "images/icons/services/3.png" %}' alt="">
+                                <h6>Médias sociaux</h6>
+                            </div>
+                            <div class="row hover_box">
+                                <div class="row m0 inner">
+                                    <h6>Médias sociaux</h6>
+                                    <div class="about">Les réseaux sociaux permettent d’engager des conversations avec votre clientèle cible en plus de contribuer à augmenter le référencement de votre site. Entre Pinterest, Instagram, Linkedin, Facebook, YouTube, etc., lesquels choisir? Chez Conseils stratégiques en marketing web, nous ne faisons pas de choix à l’aveugle. Vous saurez à quoi vous attendre en termes d’investissement de ressources humaines et financières.</div>
+                                    <a href="{% url 'services:medias_sociaux' %}" class="read_more">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 service_box">
+                        <div class="row service_box_inner">
+                            <div class="row preview_box">
+                                <img src='{% static "images/icons/services/5.png" %}' alt="">
+                                <h6>Campagne courriels et de promotion</h6>
+                            </div>
+                            <div class="row hover_box">
+                                <div class="row m0 inner">
+                                    <h6>Campagne courriels et de promotion</h6>
+                                    <div class="about">Chez CSM Conseils stratégiques en marketing web, nous vous indiquerons comment améliorer le rendement de vos campagnes courriels. Également, nous vous conseillerons sur le choix des canaux de communication les plus pertinents pour atteindre vos objectifs d’affaires.</div>
+                                    <a href="{% url 'services:courriels' %}" class="read_more">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 service_box">
+                        <div class="row service_box_inner">
+                            <div class="row preview_box">
+                                <img src='{% static "images/icons/services/4.png" %}' alt="">
+                                <h6>Développement Web</h6>
+                            </div>
+                            <div class="row hover_box">
+                                <div class="row m0 inner">
+                                    <h6>Développement Web</h6>
+                                    <div class="about">Un programmeur d'expérience et une équipe dévouée sont à l’écoute de vos besoins. Nous portons une attention particulière aux différents aspects techniques afin de développer des plateformes robustes, polyvalentes et sécuritaires dans des langages de programmation adaptés à votre stratégie d’affaires.</div>
+                                    <a href="{% url 'services:developpement_web' %}" class="read_more">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 service_box">
+                        <div class="row service_box_inner">
+                            <div class="row preview_box">
+                                <img src='{% static "images/icons/services/6.png" %}' alt="">
+                                <h6>Plateforme de gestion de contenu</h6>
+                            </div>
+                            <div class="row hover_box">
+                                <div class="row m0 inner">
+                                    <h6>Plateforme de gestion de contenu</h6>
+                                    <div class="about">La mise en place d’un bon dispositif de gestion et de production de contenu exige une réflexion stratégique pour déterminer quels sont les indicateurs de performance à mettre en place pour mesurer l'impact de vos actions vis-à-vis votre clientèle cible. Chez CSM Conseils stratégiques en marketing web nous pouvons vous aider à identifier ces indicateurs de performance et vous aider à trouver des solutions. </div>
+                                    <a href="{% url 'services:cms' %}" class="read_more">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include 'calltoaction.html' %}
+{% endblock content %}

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+	{{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+{% block content %}
+{% include 'couverture.html' with title=title %}
+  <section class="row">
+        <div class="row m0 contentRow offer_service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Une équipe dévouée <br class="hidden-xs">à l'écoute de vos besoins!</h2>
+                        <p>Avec CSM Conseils stratégiques en marketing web, vous découvrirez les avantages du marketing web et les nombreuses possibilités qui s’offrent à votre entreprise.</p>
+                        <ul class="nav">
+                            <li><img src="{% static 'images/icons/about/4.png' %}" alt="">Nous atteignons nos objectifs</li>
+                            <li><img src="{% static 'images/icons/about/5.png' %}" alt="">Vous êtes notre priorité.</li>
+                            <li><img src="{% static 'images/icons/about/6.png' %}" alt="">Nous sommes toujours prêts à vous répondre.</li>
+                            <li><img src="{% static 'images/icons/about/7.png' %}" alt="">Nos prix sont abordables.</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="owl-carousel offer_service_carousel">
+                            <div class="item"><img src="{% static 'images/about/1.png' %}" alt=""></div>
+
+                            <div class="item"><img src="{% static 'images/about/1.png' %}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m0 contentRow about_company">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/about/2.jpg' %}" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>À propos de nous</h2>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="icon"><img src="{% static 'images/icons/blog/4.png' %}" alt=""></span>
+                                            Notre histoire
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect adipo sci velit, sed quia non numquam eius modi temora incidlabore etum dolore tha magnam aliquam quaerat voluptatem. Ut enim ad minima venia quius nostrum sak exercitationem ullam corporis suscipit. laboriosam, nisi ut aliquid ex ea commodi consequatur
+                                    </div>
+                                </div>
+                            </div> <!--Panel-->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="icon"><img src="{% static 'images/icons/about/1.png' %}" alt=""></span>
+                                            Équipe de spécialistes
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        Avec CSM Conseils stratégiques en marketing web, vous aurez la chance de travailler avec une équipe de professionnels hautement qualifiés prête à vous aider grâce à différents forfaits adaptés pour toutes les entreprises.
+                                    </div>
+                                </div>
+                            </div> <!--Panel-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include 'counter.html' %}
+
+        <div class="row m0 team_members contentRow">
+            <div class="container">
+                <div class="row">                    
+                    <div class="row m0 title_row">
+                        <h2>Notre équipe</h2>
+                        <h5>Nous sommes analytiques, professionnels, créatifs et réfléchis</h5>
+                    </div>
+                    <div class="row m0">
+                        <div class="col-sm-5 team">
+                            <div class="inner row">
+                                <div class="row m0 img"><img src="{% static 'images/about/team/6.jpg' %}" alt=""></div>
+                                <ul class="nav social_lis">
+                                    <li><a href="https://www.facebook.com/claude.cote.79?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://ca.linkedin.com/in/claude-cote-161b60a3/en"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <div class="row identity m0">
+                                    <h5 class="name">Claude Côté</h5>
+                                    <h5 class="pos">Directeur Général</h5>
+                                </div>
+                            </div>
+                        </div> <!--Team-->
+                        <div class="col-sm-5 team">
+                            <div class="inner row">
+                                <div class="row m0 img"><img src="{% static 'images/about/team/6.jpg' %}" alt=""></div>
+                                <ul class="nav social_lis">
+                                    <li><a href="https://www.facebook.com/franciscampbel"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/FrancisCampbe2l"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://ca.linkedin.com/in/francis-campbell-96105258"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <div class="row identity m0">
+                                    <h5 class="name">Francis Campbell</h5>
+                                    <h5 class="pos">Directeur des projets Web</h5>
+                                </div>
+                            </div>
+                        </div> <!--Team-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--        {% include 'accueil/clients.html' %} -->
+
+    
+
+
+
+
+{% endblock content %}

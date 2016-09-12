@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+	{{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+{% block content %}
+
+{% include 'couverture.html' %}
+
+    <section class="row">
+        <div class="page_contact row m0">
+            <div class="row contact_form m0 contentRow">
+                <div class="container">
+                    <div class="row">
+                        <div class="row m0 title_row">
+                            <h2>Parlons affaire</h2>
+                            <h5>Parlez-nous de vos projets d'entreprise, <span>ou dites-nous simplement bonjour.<span></h5>
+                        </div>
+                        <div class="formArea row m0">
+                            <form method='POST' class="row m0 contact_form" id="contactForm" action=''>{% csrf_token %}
+                                <div class="col-sm-6">
+                                    <div class="row m0">
+                                        <label for="contact_name">Nom <span>*</span></label>
+                                        <input type="text" class="form-control" name="contact_name" id="contact_name" required>
+                                    </div>
+                                    <div class="row m0">
+                                        <label for="contact_phone">Téléphone</label>
+                                        <input type="tel" class="form-control" name="contact_phone" id="contact_phone">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row m0">
+                                        <label for="contact_email">Courriel <span>*</span></label>
+                                        <input type="email" class="form-control" name="contact_email" id="contact_email" required>
+                                    </div>
+                                    <div class="row m0">
+                                        <label for="contact_url">Site Web <span>*</span></label>
+                                        <input type="url" class="form-control" name="contact_url" id="contact_url" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <div class="row m0">
+                                        <label for="learn_seowave">Comment avez-vous entendu parlé de nous?</label>
+                                        <select name="learn_seowave" id="learn_seowave" class="selectpicker form-control">
+                                            <option value="0" disabled selected>-(Choix)-</option>
+                                            <option value="google">Recherche Google</option>
+                                            <option value="yahoo">Recherche Yahoo</option>
+                                            <option value="blog">Blogue</option>
+                                            <option value="forum">Facebook</option>
+                                            <option value="forum">Forums de discussion</option>                          
+                                        </select>
+                                    </div>
+                                    <div class="row m0">
+                                        <label for="interested_in">Quel service vous intéresse?</label>
+                                        <select name="interested_in" id="interested_in" class="selectpicker form-control">
+                                            <option value="off_page">Service 1</option>
+                                            <option value="on_page">Service 2</option>
+                                            <option value="on_page">Service 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="row m0">
+                                        <label for="addInfos">Message</label>
+                                        <textarea name="addInfos" id="addInfos" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                    <button id="cfsubmit" class="borderred_link" type="submit"><span>Envoyer!</span></button>
+                                </div>                            
+                            </form>                        
+                            <div id="success">
+                                <span class="green textcenter">
+                                    Votre message a été envoyé avec succès.
+                                </span>
+                            </div>
+                            <div id="error">
+                                <span>
+                                    Un problème est survenu! tentez d'actualiser la page et de l'envoyer de nouveau!
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--Contact Form-->
+            <div class="row contact_details m0 text-center">
+                <div class="col-sm-3 contact_widgets">
+                    <div class="row icon_row"><img src="images/contact/1.png" %}' alt=""></div>
+                    <h4>Heures de travail</h4>
+                    <p>(Lun. au Sam.): 10.00 AM à 07.00 PM <br> (Dimanche): Vacances!</p>
+                </div>
+                <div class="col-sm-3 contact_widgets">
+                    <div class="row icon_row"><img src="images/contact/2.png" %}' alt=""></div>
+                    <h4>Addresse</h4>
+                    <p>123 ma rue, Rimouski, <br> Québec, Canada</p>
+                </div>
+                <div class="col-sm-3 contact_widgets email">
+                    <div class="row icon_row"><img src="images/contact/3.png" %}' alt=""></div>
+                    <h4>Nous joindre</h4>
+                    <p><span>Téléphone :</span> (581) 624-1766 <br> <span>Courriel:</span> <a href="mailto:cotecsm@globetrotter.net">cotecsm@globetrotter.net</a></p>
+                </div>
+                <div class="col-sm-3 contact_widgets">
+                    <div class="row icon_row"><img src="images/contact/4.png" %}' alt=""></div>
+                    <h4>Carrière</h4>
+                    <p>Nous avons des projets pour vous!</p>
+                    <a href="#" class="borderred_link"><span>Nous contacter</span></a>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+{% endblock content %}
+

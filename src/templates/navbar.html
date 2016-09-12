@@ -1,0 +1,84 @@
+{% load staticfiles %}
+    <header class="row">
+        <div class="top_row row m0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 tagLine hidden-xs">
+                        <i class="fa fa-line-chart"></i> CSM - Pour vos besoins en analyse et développement web 
+                    </div>
+
+
+                    <div class="col-sm-6">
+                        <ul class="nav navbar-right  ">
+                            {% if not request.user.is_authenticated %}
+                                <li class="text-xs-center">
+                                    <a href="#"><img src='{% static "images/icons/top-bar/user.png" %}' alt="">Connexion / Inscription</a>
+                                </li>
+                            {% else %}
+                                <li class="text-xs-center">
+                                    <a href="{% url 'logout' %}"><img src='{% static "images/icons/top-bar/user.png" %}' alt="">Déconnexion</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!--Top Row-->
+        <div class="logo_row row m0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a class="logo" href="{% url 'index:acceuil' %}" >
+                            <img src='{% static "images/logo.png" %}' alt="csm-conseilsstrategiquesmarketingweb | Expert en analyse et développement web">
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="nav">
+                            <li><a href="#"><span class="icon phone"></span><span class="first-word">Appeler</span>: (581) 624-1766</a></li>
+                            <li><a href="mailto:cotecsm@globetrotter.net"><span class="icon email"></span><span class="first-word">Courriel</span>: cotecsm@globetrotter.net</a></li>
+                            <!-- <li><a href="#"><span class="icon share"></span></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!--Logo Row-->
+        <nav class="row menu_row m0">
+            <div class="container">
+                <div class="row">
+                    <div class="search_form_area fright">
+                        <a href="mailto:demandecsm@globetrotter.net" class="col-md-8  col-sm-12 free_analysis ">
+                            <img src='{% static "images/icons/menu/free_analysis.png" %}' alt=""> Demander une analyse
+                        </a>
+                    </div> <!--Search And Analysis-->
+                    <div class="fleft menu_area">
+                        <button class="btn btn-primary visible-xs" type="button" data-toggle="collapse" data-target="#mainMenu" aria-expanded="false" aria-controls="mainMenu">
+                            <i class="glyphicon glyphicon-th-large"></i> Menu
+                        </button>
+                        <div class="collapse navbar-collapse" id="mainMenu">
+                            <ul class="nav navbar-nav">
+                                <li><a href='{% url "index:acceuil" %}'>Accueil</a></li>    
+                                <li><a href="{% url "entreprise:details" %}">Entreprise</a></li>   
+                                <li class="dropdown">
+                                    <a href='{% url "services:liste" %}' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+                                    <ul class="dropdown-menu">                                   
+                                        <li><a href='{% url "services:audit_web" %}'>Audit Web</a></li>
+                                        <li><a href='{% url "services:seo" %}'>Services SEO</a></li>
+                                        <li><a href='{% url "services:medias_sociaux" %}'>Médias sociaux</a></li>
+                                        <li><a href='{% url "services:courriels" %}'>Campagnes courriels</a></li>
+                                        <li><a href='{% url "services:developpement_web" %}'>Développement Web</a></li>
+                                        <li><a href='{% url "services:cms" %}'>Plateformes CMS</a></li>
+                                    </ul>
+                                </li>   
+                                 <li><a href='{% url "coaching:details" %}'>Coaching</a></li>                          
+                                <li><a href='{% url "blogue:liste" %}'>Blogue</a></li>
+                                <li><a href='{% url "contact:details" %}'>contact</a></li>                             
+                            </ul>
+                        </div>
+                    </div> <!--Menu Area-->
+                </div>
+            </div>
+        </nav> <!--Menu Row-->
+    </header>
+
+
+

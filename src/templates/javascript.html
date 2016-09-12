@@ -1,0 +1,93 @@
+{% load staticfiles %}
+   <!--jQuery, Bootstrap and other vendor JS-->
+    
+    <!--jQuery-->
+    <script src='{% static "js/jquery-2.1.3.min.js" %}'></script>
+    
+    <!--Bootstrap JS-->
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+    
+    <!--Owl Carousel-->
+    <script src='{% static "vendors/owl.carousel/js/owl.carousel.min.js" %}'></script>
+    
+    <!--Bootstrap Select-->
+    <script src='{% static "vendors/bootstrap-select/js/bootstrap-select.min.js" %}'></script>
+    
+    <!--FlexSlider-->
+    <script src='{% static "vendors/flexslider/jquery.flexslider-min.js" %}'></script>
+    
+    <!--Counter Up-->
+    <script src='{% static "vendors/counterup/jquery.counterup.min.js" %}'></script>
+    
+    <!--Waypoints-->
+    <script src='{% static "vendors/waypoints/waypoints.min.js" %}'></script>
+    
+    <!--RV-->
+    <script src='{% static "vendors/rs-plugin/js/jquery.themepunch.tools.min.js" %}'></script>
+    <script src='{% static "vendors/rs-plugin/js/jquery.themepunch.revolution.min.js" %}'></script>
+    
+    <!--Mailchimp -->
+<script src='{% static "js/mc-validate.js" %}'></script>
+<script>
+(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[2]='MMERGE2';ftypes[2]='url';}(jQuery));var $mcj = jQuery.noConflict(true)
+</script> 
+    
+    <!--Strella JS-->
+    <script src='{% static "js/theme.js" %}'></script>
+    <script src='{% static "js/revs.js" %}'></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".content-markdown").each(function(){
+            var content = $(this).text()
+            var markedContent = marked(content)
+            $(this).html(markedContent)
+    })
+    $(".post-detail-item img").each(function(){
+            $(this).addClass("img-responsive");
+    })
+
+
+    var contentInput = $("#id_content");
+
+    function setContent(value){
+        var markedContent = marked(value)
+        $("#preview-content").html(markedContent)
+        $("#preview-content img").each(function(){
+            $(this).addClass("img-responsive")
+        })
+    }
+    setContent(contentInput.val())
+
+    contentInput.keyup(function(){
+        var newContent = $(this).val()
+        setContent(newContent)
+    })
+
+    var titleInput = $("#id_title");
+    
+
+
+    function setTitle(value) {
+        $("#preview-title").text(value)
+    }
+    setTitle(titleInput.val())
+
+    titleInput.keyup(function(){
+        var newContent = $(this).val()
+        setTitle(newContent)
+    })
+
+    $(".comment-reply-btn").click(function(event){
+        event.preventDefault();
+        $(this).parent().next(".comment-reply").fadeToggle();
+    })
+
+
+    // preview-title
+    // preview-content
+
+})
+
+</script>

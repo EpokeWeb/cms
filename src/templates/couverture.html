@@ -1,0 +1,19 @@
+<section class="row pageCover">
+    <div class="container p0">
+        <h3 class="fleft">{{ title }}</h3>
+        <ol class="breadcrumb">
+            <li><a href="{% url 'index:acceuil' %}">Accueil</a></li>
+            {% if page_active and lvl3 %}
+                <li> <a href="{% url 'services:liste' %}">{{ page_active }}</a></li>
+            {% endif %}
+             {% if page_active and not lvl3 %}
+                <li class="active">{{ page_active }}</li>
+            {% endif %}
+            {% if lvl3 %}
+                <li class="active">{{ title }}</li>
+            {% endif %}
+
+
+        </ol>
+    </div>
+</section>

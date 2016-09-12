@@ -1,0 +1,102 @@
+{% load staticfiles %}
+   <footer class="row">
+        <div class="row m0 top_footer">
+            <div class="container">
+                <div class="row footer_widgets">
+                    <div class="col-sm-4 footer_widget">
+                        <div class="row m0">
+                            <h4 class="title">À propos de nous</h4>
+                            <div class="row m0 body">
+                                <p>Conseil Stratégique Marketing Web est une entreprise spécialisée dans le marketing web et les stratégies de SEO. CSM pratique principalement dans l'Est du Québec. Son objectif principal est d'aider les PME et les organismes en région à garantir leur place sur le Web et ainsi assurer la longétivé de leurs services en région.
+                                <a href="#" class="borderred_link"><span>Nous contacter</span></a></p>
+
+ <!--                               <ul class="nav socials">
+                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div> <!--Single widget-->
+                    <div class="col-sm-4 footer_widget">
+                        <div class="row m0">
+                            <h4 class="title">Service offerts</h4>
+                            <div class="row m0 body">
+                                <ul class="list-unstyled links">
+                                    <li class="fa fa-caret-right"><a href="{% url "services:audit_web" %}">Audit web</a></li>
+                                    <li class="fa fa-caret-right"><a href="{% url "services:seo" %}">Services SEO</a></li>
+                                    <li class="fa fa-caret-right"><a href="{% url "services:medias_sociaux" %}">Médias sociaux</a></li>
+                                    
+                                    <li class="fa fa-caret-right"><a href="{% url "services:developpement_web" %}">Développement Web</a></li>
+                                    <li class="fa fa-caret-right"><a href="{% url "services:courriels" %}">Campagne courriels & promotion</a></li>
+                                    <li class="fa fa-caret-right"><a href="{% url "services:cms" %}">Plateforme de gestion de contenu</a></li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!--Single widget-->
+                    <div class="col-sm-4 footer_widget">
+                        <div class="row m0">
+                            <h4 class="title">Derniers articles du blogue</h4>
+                            <div class="row m0 body">
+                                <!-- Begin MailChimp Signup Form -->
+                                <div id="mc_embed_signup" class="row m0">
+                                    <form 
+                                      action="" 
+                                       id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" 
+                                      class="validate mailchimp_form" target="_blank">
+                                        <div id="mc_embed_signup_scroll">                                            
+                                            <div class="mc-field-group input-group ">
+                                                <span class=""><img src='{% static "images/icons/footer/name.png" %}' alt=""></span>
+                                                <span class="email"><a href="">01/01/2001 - Titre de l'article</a></span>
+                                            </div>
+                                            <div class="mc-field-group input-group ">
+                                                <span class=""><img src='{% static "images/icons/footer/name.png" %}' alt=""></span>
+                                                <span class="email"><a href="">01/01/2001 - Titre de l'article</a></span>
+                                            </div>
+                                            <div class="mc-field-group input-group ">
+                                                <span class=""><img src='{% static "images/icons/footer/name.png" %}' alt=""></span>
+                                                <span class="email"><a href="">01/01/2001 - Titre de l'article</a></span>
+                                            </div>
+                                            <div class="clear">
+                                                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn submit_btn borderred_link"><span>Voir tous les articles</span></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--End mc_embed_signup-->
+                            </div>
+                        </div>
+                    </div> <!--Single widget-->
+                </div>
+                </div>
+                <div class="container-fuild">
+                
+                <div class="row footer_widgets2 m0">
+                   <div class="container"> <ul class="nav nav-justified">
+                        <li>
+                            <a href="#">
+                                <img src='{% static "images/icons/footer/call.png" %}' alt=""><strong>Nous appeler</strong>: (581) 624-1766
+                            </a>
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>
+                            <a href="mailto:cotecsm@globetrotter.net">                                
+                                <img src='{% static "images/icons/footer/mail.png" %}' alt=""><strong>Courriel</strong>: cotecsm@globetrotter.net
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row copyright m0 ">Copyright &copy; 2016 <a href="http://epokeweb.com">EpokeWeb</a>. Tous droits réservés.</div>
+    </footer>

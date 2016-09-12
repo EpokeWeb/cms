@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+    {{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+{% include 'couverture.html' %}
+    <section class="row">
+        <div class="container">
+            <div class="row page_service_details contentRow">
+                <div class="col-sm-9 service_descs">
+                    <div class="row m0">
+                       <div class="row m0">
+                           <div class="fleft fpara">
+                               <h3 class="sv_titile">{{ title }}</h3>
+                               <div class="sv_about">
+                                   <p class="f12">Aujourd’hui les internautes passent de plus en plus de temps à consulter les contenus diffusés sur les réseaux sociaux et à interagir avec les membres des communautés formées autour d’une marque ou d’un produit  <br><br>
+                                   
+                                   Il a été démontré que la valeur économique d’une entreprise s’améliore  lorsque les clients s’engagent vis-à-vis une entreprise ou qu’ils recommandent cette dernière auprès de leurs amis. <br><br>
+
+                                   Développer une stratégie d’engagement sur les réseaux sociaux demande au préalable de répondre aux 10 questions suivantes :</p>
+
+
+                      <div class="about_company">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="icon"><i class="fa">1</i></span>
+                                            Quel est le public cible visé ? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        Chaque réseau social attire un public spécifique, en termes de motivation et de caractéristiques, notamment sociodémographiques. En examinant un échantillon de personnes, parmi celles qui suivent une entreprise ou ses concurrents, nous sommes en mesure de déterminer parmi les internautes lesquels devront faire l’objet d’une attention particulière en lien avec les services ou produits offerts par votre entreprise.
+                                    </div>
+                                </div>
+                            </div> <!--Panel-->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="icon"><i class="fa">2</i></span>
+                                            En terme de contenu, quelles sont les préférences de votre public cible? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        Le type de contenus que les différents publics apprécient de voir sur chaque réseau se déduit des contenus qu’ils apprécient/ partagent/ commentent et/ou auxquels ils attribuent une valeur élevée. À titre d’exemples, ce seront peut-être les vidéos placées sur Facebook qui attireront davantage votre clientèle cible, sur Twitter ou Pinterest, ce sera peut-être une illustration qui résume de manière schématique une solution à une problématique, etc.
+                                    </div>
+                                </div>
+                            </div> <!--Panel-->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading3">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                            <span class="icon"><i class="fa">3</i></span>
+                                            Quel est le public cible visé ?  
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                    <div class="panel-body">
+                                        Il faut conserver à l’esprit que la majorité des actions de communication sur les réseaux sociaux vise à engager une conversation avec le client et que conséquemment il faut déterminer quels sont les types de contenus qui seront les plus susceptibles de favoriser l’échange et le dialogue. Le dialogue est l’élément clé sur lequel l’entreprise doit se concentrer. L’internaute doit sentir que l’entreprise est en mode écoute et qu’elle est prête à engager des actions pour répondre aux besoins exprimés.
+                                    </div>
+                                </div>
+                            </div> <!--Panel-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading4">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                            <span class="icon"><i class="fa">4</i></span>
+                                            Quels types de contenus doivent être mis de l’avant ? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                                    <div class="panel-body">
+                                        Pour répondre à cette question il s’agit d’effectuer une analyse des besoins des clients et d’effectuer un benchmark des entreprises concurrentes pour cerner les sujets qui obtiennent le plus de succès.
+                                    </div>
+                                </div>
+                            </div> <!--Panel--> 
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading5">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                            <span class="icon"><i class="fa">5</i></span>
+                                            À quelle fréquence l’entreprise doit-elle publier ? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                    <div class="panel-body">
+                                        Afin de susciter l’engagement d’un public cible, il faut publier sur une base régulière de nouveaux contenus. Mais que signifie sur une base régulière ? Est-ce qu’il s’agit de mettre à jour son statut plusieurs fois par jour, par semaine ou par mois. Pour déterminer la cadence, il est primordial de définir un calendrier éditorial où les thèmes seront identifiés en fonction de plusieurs paramètres : les saisons, les périodes propices aux rassemblements, le lancement d’un nouveau produit, la tenue d’une campagne de promotion, l’envoi d’une circulaire, etc. 
+                                    </div>
+                                </div>
+                            </div> <!--Panel--> 
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading6">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                                            <span class="icon"><i class="fa">6</i></span>
+                                            Faut-il confié à des services externes la production du contenu ? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                                    <div class="panel-body">
+                                        La création d’un contenu pertinent prend du temps, même lorsqu’il s’agit de publier un simple tweet de 140 caractères ou d’une mise à jour de votre statut sur un réseau. Très souvent, les contenus à publier feront référence à des contenus plus approfondis, lesquels sont hébergés sur le site web ou le blogue de l’entreprise. La création de ces contenus demandera encore plus de temps, car il faut présenter un contenu de qualité qui n’est pas une duplication de votre contenu web. En fonction de la complexité ou non des messages à produire le recours à une agence peut s’avérer nécessaire.
+                                    </div>
+                                </div>
+                            </div> <!--Panel--> 
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading7">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                                            <span class="icon"><i class="fa">7</i></span>
+                                            Comment gérer la publication et l’interaction? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                                    <div class="panel-body">
+                                        Non seulement il faut s’assurer d’actualiser le contenu diffusé sur les réseaux sociaux, mais aussi il faut répondre et interagir avec les internautes via la plate-forme sociale utilisée. À ce sujet, il faut s’interroger qui à l’intérieur de l’entreprise ou l’extérieur va s’acquitter de cette mission.
+                                    </div>
+                                </div>
+                            </div> <!--Panel--> 
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading8">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                                            <span class="icon"><i class="fa">8</i></span>
+                                            Comment gérer le processus de publication ? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                                    <div class="panel-body">
+                                        Une application ne peut pas créer du contenu à la place d’une entreprise. Cependant, elle peut rationnaliser le processus de production et de publication. Des outils tels que Hootsuite ou Sproutsocial peuvent vous permettre de partager les mises à jour de statut sur différents réseaux sociaux comme par exemple Facebook, Linkedin ou Twitter. Mêmes si ces applications peuvent vous permettre de gagner en productivité, il faut garder à l’esprit que les contenus doivent être adapté aux réseaux. À titre d’exemple la manière de s’exprimer sur Facebook ne convient pas pour Linkedin, un réseau cherchant à mettre en contact des hommes ou femmes d’affaires ou des entreprises de services administratifs ou spécialisés.
+                                    </div>
+                                </div>
+                            </div> <!--Panel--> 
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading9">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="true" aria-controls="collapse9">
+                                            <span class="icon"><i class="fa">9</i></span>
+                                            Comment doit-on effectuer le suivi de l’impact commercial du réseautage social ? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                                    <div class="panel-body">
+                                        Chaque plateforme met à la disposition des gens qui s’occupe du marketing dans une entreprise divers outils permettant de mesurer l’efficacité de vos actions sur le ou les réseaux sociaux. Entre autres, ces outils d’analyse vont vous permettre d’effectuer des analyses d’audience et vous indiquer la popularité de vos messages. Si nécessaire, ils peuvent vous aider à paramétrer vos messages en fonction de caractéristiques sociodémographiques contribuant ainsi à un meilleur ciblage de la clientèle que vous souhaitez rejoindre.
+                                    </div>
+                                </div>
+                            </div> <!--Panel--> 
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading10">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="true" aria-controls="collapse10">
+                                            <span class="icon"><i class="fa">10</i></span>
+                                            Comment optimiser votre présence sociale ? 
+                                            <span class="sign"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+                                    <div class="panel-body">
+                                        Aujourd’hui, les technologies changent rapidement et les expertises détenues pas des professionnels du marketing web sont fragiles. Ce qui était vrai hier, ne le sera peut-être plus aujourd’hui. Si l’on veut tirer le meilleur parti d’une présence sur les réseaux sociaux, il convient donc de tester en permanence différentes façons de faire dans le but de tirer des leçons et de peaufiner les activités marketing. 
+                                    </div>
+                                </div>
+                            </div> <!--Panel--> 
+
+
+
+                        </div>
+                    </div>
+<p class="f13">Avant de s’engager sur les réseaux sociaux, les entreprises doivent prendre en compte chacun des facteurs énumérés précédemment pour éviter de s’engager dans des actions qui pourraient nuire à la réputation de l’entreprise.  Comme le veut le dicton : la meilleure improvisation est celle qui a été longuement réfléchie. 
+                           </p>
+
+
+
+
+
+                               </div>
+                           </div>
+                       
+                   
+<!--                            <ul class="nav sv_subjects">
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/1.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Keyword Research</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/2.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Website Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/3.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Competitor Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/4.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Backlink Building</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/5.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Analytics</div>
+                                    </div>
+                                </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/6.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Web 2.0/Social Media Management</div>
+                                   </div>
+                               </li>
+                           </ul> -->
+                       </div>
+<!--                        <div class="row m0 graph_row">
+                           <h5 class="sv_subtitle_center">Ranking Page Authority Scores</h5>
+                           <img src='{% static "images/icons/services/details/graph.png" %}' alt="" class="graph img-responsive">
+                       </div>
+                       <div class="row m0">
+                           <h4 class="sv_subtitle">Some of Our Results</h4>
+                           <div class="row m0 funFacts">
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/7.png" %}' alt=""> <span class="counter">400</span>%</h3>
+                                   <h6>Increase in Page 1 Rankings</h6>
+                               </div>
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/8.png" %}' alt=""> <span class="counter">160</span>%</h3>
+                                   <h6>Increase in Organic Traffic</h6>
+                               </div>
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/9.png" %}' alt=""> <span class="counter">58</span>%</h3>
+                                   <h6>Average visit duration</h6>
+                               </div>
+                           </div>
+                       </div> -->
+                    </div>
+                </div>
+                {% include 'services/sidebar.html' %}
+            </div>
+        </div>
+    </section>
+
+
+{% include 'calltoaction.html' %}
+{% endblock content %}
+

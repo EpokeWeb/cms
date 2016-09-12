@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+    {{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+{% include 'couverture.html' %}
+    <section class="row">
+        <div class="container">
+            <div class="row page_service_details contentRow">
+                <div class="col-sm-9 service_descs">
+                    <div class="row m0">
+                       <div class="row m0">
+                           <div class="fleft fpara">
+                               <h3 class="sv_titile">{{ title }}</h3>
+                               <div class="sv_about">
+                                   <p class="f12">Un site web efficace ne doit pas être élaboré comme un imprimé (brochure, revue, dépliant). Il doit être réfléchi de manière à capter l’attention de l’internaute et à susciter chez lui l’envie d’établir un contact avec le propriétaire du site. Aujourd’hui. on ne peut plus se contenter d’une présentation de l’entreprise et son offre. Le site web doit être attractif en plus d’être facilement classé par les moteurs de recherche<br><br>
+
+                                   Réussir à capter suffisamment l’attention de l’internaute au point qu’il souhaite entrer en contact avec le propriétaire (achat en ligne, envoi d’un formulaire, abonnement à une cyberlettre, etc.) constitue l’objectif premier de tous les sites web. Un mauvais fonctionnement technique ou une négligence organisationnelle du créateur du site peuvent compromettre ce premier contact, d’où l’importance de réaliser un audit.<br><br>
+
+                                   Le principal objectif de l’audit des fonctionnalités est de recenser les fonctionnalités du site web et de détailler leur fonctionnement. Après avoir effectué avec minutie cet exercice, l’auditeur peut détecter les éléments qui contribuent à son dysfonctionnement et qui nuisent à un référencement optimal du site.</p>
+<!--                                    <ul class="list-unstyled">
+                                       <li><i class="fa fa-check"></i> Unrivalled levels of service</li>
+                                       <li><i class="fa fa-check"></i> Proven results in competitive markets</li>
+                                       <li><i class="fa fa-check"></i> Real metrics - no marketing fluff!</li>
+                                   </ul> -->
+                               </div>
+                           </div>
+                       </div>
+                       <div class="row m0">
+                           <h4 class="sv_subtitle">Audit de référencement et de positionnement</h4>
+                           <p class="f13">Les plus grandes sources de trafic pour un site web sont les moteurs de recherche, l’accès direct (saisie dans un navigateur de l’adresse exacte du site ou la réalisation de campagne de courriels qui donne accès direct ment au site web) et les liens externes (liens positionnés sur d’autres sites web).<br><br>
+                           On évalue que le trafic généré par les moteurs de recherche est d’environ 50 %, contre 40 % pour les liens directs et 10 % pour les liens externes.<br><br>
+                           Même si ces pourcentages fluctuent selon les types de sites web (e-commerce, site institutionnel, blog, site technique, etc.), il est évident que le référencement et le positionnement dans les moteurs de recherche sont aujourd’hui stratégiques pour améliorer le trafic d’un site web. <br><br>
+                           Devant l’augmentation toujours croissante du nombre de pages web, les moteurs de recherche développent des algorithmes de plus en plus sophistiqués pour repérer les sites qui correspondent le mieux aux requêtes formulées par les internautes. L’apparition de tablettes mobiles ainsi que l’usage de plus en plus important du téléphone intelligent au quotidien ont modifié de manière sensible les façons de faire.<br><br> 
+                           À titre d’exemple, au printemps 2015, Google a annoncé qu’elle prendrait désormais en compte la compatibilité d’un site web avec les mobiles comme critère de référencement. En clair, cela signifie qu’un site non compatible avec les mobiles sera rétrogradé dans les résultats de recherche. <br><br>
+                           Lorsque l’on parle de référencement, il est important de bien différencier l’indexation (prise en compte du site web et de son contenu par les moteurs de recherche) et le positionnement d’un site web (optimisation d’une page du site web par rapport à un mot-clé recherché par l’internaute).<br><br>
+                           Afin de juger de la performance d’un site Web, CSM Conseils stratégiques en marketing Web a intégré dans sa démarche d’évaluation d’un site l’emploi de différents outils qui permettent de porter un jugement éclairé basé sur des faits et non sur des perceptions. Notre priorité : identifier les correctifs à mettre en place pour améliorer le référencement de votre site web dans les pages de résultats des moteurs de recherche.
+                           </p>
+<!--                            <ul class="nav sv_subjects">
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/1.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Keyword Research</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/2.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Website Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/3.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Competitor Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/4.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Backlink Building</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/5.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Analytics</div>
+                                    </div>
+                                </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/6.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Web 2.0/Social Media Management</div>
+                                   </div>
+                               </li>
+                           </ul> -->
+                       </div>
+<!--                        <div class="row m0 graph_row">
+                           <h5 class="sv_subtitle_center">Ranking Page Authority Scores</h5>
+                           <img src='{% static "images/icons/services/details/graph.png" %}' alt="" class="graph img-responsive">
+                       </div>
+                       <div class="row m0">
+                           <h4 class="sv_subtitle">Some of Our Results</h4>
+                           <div class="row m0 funFacts">
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/7.png" %}' alt=""> <span class="counter">400</span>%</h3>
+                                   <h6>Increase in Page 1 Rankings</h6>
+                               </div>
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/8.png" %}' alt=""> <span class="counter">160</span>%</h3>
+                                   <h6>Increase in Organic Traffic</h6>
+                               </div>
+                               <div class="col-sm-4 fact">
+                                   <h3><img src='{% static "images/icons/services/details/9.png" %}' alt=""> <span class="counter">58</span>%</h3>
+                                   <h6>Average visit duration</h6>
+                               </div>
+                           </div>
+                       </div> -->
+                    </div>
+                </div>
+                {% include 'services/sidebar.html' %}
+            </div>
+        </div>
+    </section>
+
+
+{% include 'calltoaction.html' %}
+{% endblock content %}
+

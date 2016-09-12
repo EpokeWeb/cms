@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+	{{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+
+{% include 'accueil/slider.html' %}
+
+ <section class="row">
+        <div class="row m0 successive_process contentRow">
+            <div class="container">
+                <div class="row title_row">
+                    <h2>Notre processus</h2>
+                    <h5>Nous avons une approche analytique soignée qui donne des résultats</h5>
+                </div>
+            </div>            
+            <div class="row m0 successive_process_inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="fleft process">
+                            <div class="dot_circle row m0">
+                                <div class="icon_circle row m0">
+                                    <img src='{% static "images/process/1.png" %}' alt="">
+                                    <div class="row m0 hover_texts">Approche centrée <br>sur vos usagers et leurs besoins</div>
+                                </div>
+                            </div>
+                            <div class="row m0">1. Clients</div>
+                        </div>
+                        <div class="fleft process">
+                            <div class="dot_circle row m0">
+                                <div class="icon_circle row m0">
+                                    <img src='{% static "images/process/2.png" %}' alt="">
+                                    <div class="row m0 hover_texts">Qui cible vos  <br>objectifs de croissance</div>
+                                </div>
+                            </div>
+                            <div class="row m0">2. Objectifs</div>
+                        </div>
+                        <div class="fleft process">
+                            <div class="dot_circle row m0">
+                                <div class="icon_circle row m0">
+                                    <img src='{% static "images/process/5.png" %}' alt="">
+                                    <div class="row m0 hover_texts">et des suivis analytiques <br>poussés</div>
+                                </div>
+                            </div>
+                            <div class="row m0">3. Analyse</div>
+                        </div>                        
+                        <div class="fleft process">
+                            <div class="dot_circle row m0">
+                                <div class="icon_circle row m0">
+                                    <img src='{% static "images/process/3.png" %}' alt="">
+                                    <div class="row m0 hover_texts">Grâce à des stratégies <br>performantes</div>
+                                </div>
+                            </div>
+                            <div class="row m0">4. Stratégies</div>
+                        </div>
+                        <div class="fleft process">
+                            <div class="dot_circle row m0">
+                                <div class="icon_circle row m0">
+                                    <img src='{% static "images/process/4.png" %}' alt="">
+                                    <div class="row m0 hover_texts">Et des outils à<br>la fine pointe du web</div>
+                                </div>
+                            </div>
+                            <div class="row m0">5. Technologies</div>
+                        </div>
+                         <div class="fleft process">
+                            <div class="dot_circle row m0">
+                                <div class="icon_circle row m0">
+                                    <img style="width:45%" src='{% static "images/icons/services/8.png" %}' alt="">
+                                    <div class="row m0 hover_texts">Vous obtiendrez<br>des résultats épatants</div>
+                                </div>
+                            </div>
+                            <div class="row m0">6. Résultats</div>
+                        </div>                       
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">                
+                <div class="row text-center">
+                    <a href="{% url 'contact:details' %}" class="borderred_link quote_btn"><span class="lh45">Passez à l'action maintenant!</span></a>
+                </div>
+            </div>
+        </div>    
+  
+    
+    <section class="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="media discover_services">
+                    <div class="media-left heading_secs col-sm-5 col-md-3">
+                        <h2 class="discover_heading">Découvrez <br> nos services</h2>
+                        <!-- <h5 class="sub_heading">Nous sommes experts en marketing web <br>&amp; en optimisation d'outils 1.</h5> -->
+                        <p class="about">Nous sommes experts en marketing web, analyse de performance de vos contenus sur le web et dans les médias sociaux. Nous vous apprendrons à créer une synergie entre vos différents canaux de communication. Nous vous aiderons à créer des campagnes courriels et à développer une page d’entreprise Facebook cohérente avec vos objectifs d’affaires. Nous vous accompagnerons dans vos prises de décision au sujet du marketing web de votre entreprise.</p>
+                        <a href="{% url 'contact:details' %}" class="subscribe_btn btn">Contactez-nous</a>
+                    </div>
+                    <div class="media-body services_secs col-sm-7 col-md-9">
+                        <div class="col-sm-4 service_box">
+                            <div class="row service_box_inner">
+                                <div class="row preview_box">
+                                    <img src='{% static "images/icons/services/1.png" %}' title="Service SEO" alt="Search Engine Optimization">
+                                    <h6>Audit web</h6>
+                                </div>
+                                <div class="row hover_box">
+                                    <div class="row m0 inner">
+                                        <h6>Audit web</h6>
+                                        <div class="about">Nous utilisons différents outils d’analyse pour évaluer la performance de votre site Web et identifier les points qui doivent faire l’objet d’une amélioration. Aujourd’hui, avoir un site web de qualité est obligatoire pour construire à long terme votre image de marque. Articuler une stratégie marketing autour d’un site web inefficace constitue une pure perte de temps.</div>
+                                        <a href="{% url 'services:audit_web' %}" class="read_more">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service_box">
+                            <div class="row service_box_inner">
+                                <div class="row preview_box">
+                                    <img src='{% static "images/icons/services/2.png" %}' title="Achat de mots clés" alt="Achat de mots clés">
+                                    <h6>Services SEO</h6>
+                                </div>
+                                <div class="row hover_box">
+                                    <div class="row m0 inner">
+                                        <h6>Services SEO</h6>
+                                        <div class="about">Le SEO (Search Engine Optimization) se définit comme un ensemble de méthodes et techniques qui contribuent à améliorer la visibilité de votre site web dans le but d’obtenir un meilleur positionnement dans les pages de résultats des moteurs de recherche. Chez CSM Conseils stratégiques en marketing web nous connaissons la valeur des mots clés pour mettre en valeur votre site web.</div>
+                                        <a href="{% url 'services:seo' %}" class="read_more">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service_box">
+                            <div class="row service_box_inner">
+                                <div class="row preview_box">
+                                    <img src='{% static "images/icons/services/3.png" %}' title=">Médias sociaux" alt=">Médias sociaux">
+                                    <h6>Médias sociaux</h6>
+                                </div>
+                                <div class="row hover_box">
+                                    <div class="row m0 inner">
+                                        <h6>Médias sociaux</h6>
+                                        <div class="about">Les réseaux sociaux permettent d’engager des conversations avec votre clientèle cible en plus de contribuer à augmenter le référencement de votre site web. Entre Pinterest, Instagram, Linkedin, Facebook, YouTube, MySpace, etc., lesquels choisir? Chez Conseils stratégiques en marketing web, nous ne faisons pas de choix à l’aveugle. Nos choix sont éclairés. Vous saurez à quoi vous attendre en termes d’investissement de ressources humaines et financières. </div>
+                                        <a href="{% url 'services:medias_sociaux' %}" class="read_more">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service_box">
+                            <div class="row service_box_inner">
+                                <div class="row preview_box">
+                                    <img src='{% static "images/icons/services/4.png" %}' title="Développement Web" alt="Développement We">
+                                    <h6>Campagne courriels et de promotion</h6>
+                                </div>
+                                <div class="row hover_box">
+                                    <div class="row m0 inner">
+                                        <h6>Campagne courriels et de promotion</h6>
+                                        <div class="about">Chez CSM Conseils stratégiques en marketing web, nous vous indiquerons comment améliorer le rendement de vos campagnes courriels. Également, nous vous conseillerons sur le choix des canaux de communication les plus pertinents pour atteindre vos objectifs d’affaires.</div>
+                                        <a href="{% url 'services:courriels' %}" class="read_more">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service_box">
+                            <div class="row service_box_inner">
+                                <div class="row preview_box">
+                                    <img src='{% static "images/icons/services/5.png" %}' title="Email marketing" alt=">Email marketing">
+                                    <h6>Développement Web</h6>
+                                </div>
+                                <div class="row hover_box">
+                                    <div class="row m0 inner">
+                                        <h6>Développement Web</h6>
+                                        <div class="about">Un programmeur d'expérience et une équipe dévouée sont à l’écoute de vos besoins. Nous portons une attention particulière aux différents aspects techniques afin de développer des plateformes robustes, polyvalentes et sécuritaires dans des langages de programmation adaptés à votre stratégie d’affaires.</div>
+                                        <a href="{% url 'services:developpement_web' %}" class="read_more">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service_box">
+                            <div class="row service_box_inner">
+                                <div class="row preview_box">
+                                    <img src='{% static "images/icons/services/6.png" %}' title="Plateforme de gestion de contenu" alt="Plateforme de gestion de contenu">
+                                    <h6>Plateforme de gestion de contenu</h6>
+                                </div>
+                                <div class="row hover_box">
+                                    <div class="row m0 inner">
+                                        <h6>Plateforme de gestion de contenu</h6>
+                                        <div class="about">La mise en place d’un bon dispositif de gestion et de production de contenu exige une réflexion stratégique pour déterminer quels sont les indicateurs de performance à mettre en place pour mesurer l'impact de vos actions vis-à-vis votre clientèle cible. Chez CSM Conseils stratégiques en marketing web nous pouvons vous aider à identifier ces indicateurs de performance et vous aider à trouver des solutions. </div>
+                                        <a href="{% url 'services:cms' %}" class="read_more">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <section class="row contentRow">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 feature_cols">
+                    <div class="media feature_col">
+                        <div class="media-left"><a href="#"><img src='{% static "images/icons/features/1.png" %}' alt=""></a></div>
+                        <div class="media-body">
+                            <h5>Votre image de marque</h5>
+                            <p>Sont essentiels pour le développement d'une bonne stratégie marketing et l'analyse de vos performances sur le Web</p>
+                            <a href="{% url 'services:audit_web' %}" class="learn_more">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 feature_cols">
+                    <div class="media feature_col">
+                        <div class="media-left"><a href="#"><img src='{% static "images/icons/about/5.png" %}' alt=""></a></div>
+                        <div class="media-body">
+                            <h5>Votre image de marque</h5>
+                            <p>Vous permettent de présenter votre entreprise sur le web, de choisir les médiums à utiliser et de faire évoluer votre présence sur le web.</p>
+                            <a href="{% url 'services:medias_sociaux' %}" class="learn_more">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 feature_cols">
+                    <div class="media feature_col">
+                        <div class="media-left"><a href="#"><img src='{% static "images/icons/about/3.png" %}' alt=""></a></div>
+                        <div class="media-body">
+                            <h5>Vos outils technoloques</h5>
+                            <p>Vous permettent de rayonner, de vous faire connaître, d'analyser vos actions et d'avoir un dialogue avec votre clientèle.</p>
+                            <a href="{% url 'services:cms' %}" class="learn_more">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+{% include 'counter.html' %}
+}
+    
+
+
+{% endblock content %}

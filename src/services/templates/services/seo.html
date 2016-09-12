@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load urlify %}
+{% load crispy_forms_tags %}
+
+
+{% block head_title %}
+    {{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+{% include 'couverture.html' %}
+    <section class="row">
+        <div class="container">
+            <div class="row page_service_details contentRow">
+                <div class="col-sm-9 service_descs">
+                    <div class="row m0">
+                       <div class="row m0">
+                           <div class="fleft fpara">
+                               <h3 class="sv_titile">{{ title }}</h3>
+                               <div class="sv_about">
+                                   <p class="f12">En quoi consiste le Search Engine Optimisation (SEO) ? En peu de mots, disons qu’il s’agit d’un processus réfléchi qui vise à mettre en avant la pertinence réelle de votre site web plutôt qu’à faire croire à une pertinence qu’il n’aurait pas. Un site web qui regroupe les bons mots clés dans le contenu des pages web facilite le travail des outils de recherche comme Google pour offrir aux internautes les sites correspondant le mieux à leurs requêtes.<br><br>
+
+                                   La raison première de Google est d’offrir à partir de ses algorithmes un contenu de qualité et pertinent aux internautes dans leurs recherches d’information. Google et les autres moteurs de recherche accordent une très grande importance à la qualité du contenu des pages web. Les moteurs de recherche pénalisent les sites qui n’offrent pas un contenu pertinent.</p>
+<!--                                    <ul class="list-unstyled">
+                                       <li><i class="fa fa-check"></i> Unrivalled levels of service</li>
+                                       <li><i class="fa fa-check"></i> Proven results in competitive markets</li>
+                                       <li><i class="fa fa-check"></i> Real metrics - no marketing fluff!</li>
+                                   </ul> -->
+                               </div>
+                       </div>
+                       </div>
+                       <div class="row m0">
+                           <h4 class="sv_subtitle">Les algorithmes de Google</h4>
+                           <ul>
+                            <li>Google Panda
+                              <p class="f13">Au début de l’année 2011, Google a mis en place le filtre Google Panda afin de palier aux pratiques douteuses apparues au début des années 2000 pour influencer le classement des pages de résultats de sites web dans le moteur de recherche. Google a donc pris les moyens pour inciter les <a href="http://www.oqlf.gouv.qc.ca/ressources/bibliotheque/dictionnaires/Internet/fiches/8357216.html" >édimestres</a> à produire des contenus de qualité</p>
+                             </li>
+                             <li>Google Pingouin
+                              <p class="f13">En 2012, Google a effectué une mise à jour de son algorithme connu sous l’appellation Panda qu’elle a appelé Pingouin. Cette mise à jour visait à réduire le positionnement des sites Web qui faisaient appel à des techniques de référencement abusif tels que le « keyword stuffing, le cloakink », la participation à des échanges de liens ou encore à la duplication de contenu.</p>
+                             </li>
+                             <li>Google Pigeon
+                              <p class="f13">Depuis juillet 2014, Google a procédé à une mise à jour de son algorithme pour mieux cibler les résultats de recherche locale. Connu sous l’appellation Google Pigeon l’algorithme propose aux internautes les résultats de recherche les plus utiles et pertinents en fonction de la géolocalisation de l’internaute.</p>
+                             </li>
+                           </ul>
+
+                           <p class="f13">Toutes ces modifications n’ont qu’un seul but : satisfaire l’internaute dans sa requête et lui fournir une réponse adéquate en temps réel peut importe où il se situe. </p>
+
+                           <h4 class="sv_subtitle">Pourquoi investir dans le référencement naturel ?</h4>
+                           <p class="f13">Produire un contenu de qualité, exige préalable d’avoir réfléchi au contenu que vous souhaitez livrer à votre clientèle cible. Cette réflexion vous permettra d’identifier les meilleurs mots-clés susceptibles d’être repérer par les robots des moteurs de recherche (crawler ou spider) lesquels pourront par la suite rediriger l’information vers votre clientèle cible.<br><br>
+
+                           Plus un site s’affiche sur différentes expressions, plus grandes seront ses chances d’être visité par les internautes. Les principaux avantages d’un bon référencement naturel se traduisent comme suit :</p>
+                           <ul style="margin-top:-30px">
+                            <li>une meilleure visibilité de votre site</li>
+                            <li>un trafic plus élevé sur votre site</li>
+                            <li>un meilleur positionnement de votre entreprise sur le marché</li>
+                            <li>une capacité accrue de rejoindre plus efficacement les clients </li>
+                            <li>la possibilité d’augmenter vos ventes en vous qualifiant auprès d’une clientèle cible mieux défini</li>
+                           </ul>
+                           
+<!--                            <ul class="nav sv_subjects">
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/1.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Keyword Research</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/2.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Website Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/3.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Competitor Analysis</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/4.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Backlink Building</div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/5.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Analytics</div>
+                                    </div>
+                                </li>
+                               <li>
+                                   <div class="media">
+                                       <div class="media-left"><span><img src='{% static "images/icons/services/details/6.png" %}' alt=""></span></div>
+                                       <div class="media-body media-middle">Web 2.0/Social Media Management</div>
+                                   </div>
+                               </li>
+                           </ul> --><br><br>
+                            <div class="row m0">
+                           <h4 class="sv_subtitle">Les algorithmes de Google</h4>
+                       
+                        <div class="row m0 graph_row">
+                           <h3 class="sv_subtitle_center">Les étapes clés pour réussir son référencement naturel sur le web</h3>
+                           <img src='{% static "images/seo.jpg" %}' alt="" class="graph img-responsive">
+                       </div></div></div>
+
+                    </div>
+                </div>
+                {% include 'services/sidebar.html' %}
+            </div>
+        </div>
+    </section>
+
+
+{% include 'calltoaction.html' %}
+{% endblock content %}
+

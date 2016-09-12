@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head_title %}
+    {{ instance.title }} {{ title }}{{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+
+{% include 'couverture.html' %}
+    <section class="row">
+        <div class="container">
+            <div class="row page_service_details contentRow2">
+                <div class="col-sm-12 service_descs">
+                    <div class="row m0">
+                       <div class="row m0">
+                           <div class="fleft fpara">
+                               <h3 class="sv_titile">Services-conseils en marketing web</h3>
+                               <div class="sv_about">
+                                   <p class="f12">Que faut-il savoir pour se lancer dans le marketing en ligne ? Comment développer une stratégie efficace en webmarketing ? Sur quelles actions faut-il se concentrer et comment réalisé que ce qui a été décidé ? Quelle place dois-je accorder aux réseaux sociaux tels que Facebook et Twitter, Linkedin et à tous ces nouveaux médias qui apparaissent sans cesse plus nombreux. <br><br>
+
+                                   Le marketing web pose de nombreux défis et demande une maîtrise de plusieurs aspects tels que : les moteurs de recherche, la communication par message électroniques, les blogues, les médias sociaux, les ebook, etc. À cela il faut ajouter les nombreuses plateformes technologiques qui ne cessent d’évoluer.  <br><br>
+
+                                   Il est tout a fait normal que dans un tel contexte vous ayez besoin d’aide pour vous y retrouver. Chez CSM Conseils stratégiques en marketing nous sommes en mesure de vous offrir des services conseils dans les domaines de la planification stratégique (plan marketing, plan de communication, etc.) à la planification tactique comprenant la réalisation de campagne promotionnelle de vos produits et services. Nous sommes en mesure de vous aider à mieux vous positionner sur le web et à obtenir des résultats probants sur vos activités de communication avec votre clientèle cible. </p>
+                            </div>
+                        </div>
+                        <div class="fleft fpara">
+                               <h3 class="sv_titile">Forfait de base – 199 $</h3>
+                               <div class="sv_about">
+                                   <p class="f12">Le forfait de base comprend un rapport détaillé de la situation de votre site au niveau du référencement naturel (cohérence des mots clés, comment s’affiche la brève description de votre site dans les pages de résultats des moteurs de recherche, la détection d’erreurs par les robots, l’apparence de votre site sur les mobiles (tablette et téléphone), la vitesse de téléchargement de vos pages, etc.</p>
+                            </div>
+                        </div>
+                        <div class="fleft fpara">
+                               <h3 class="sv_titile">Forfait intermédiaire 1199 $</h3>
+                               <div class="sv_about">
+                                   <p class="f12">Le rapport d’analyse du forfait intermédiaire inclut les éléments du forfait de base en plus d’une analyse de l’ergonomie de votre site web (arborescence, la navigation, le web design et l’expérience-utilisateur, etc.) À cela, nous ajoutons une analyse comparative de votre site par rapport à trois concurrents de votre choix. À noter que sur le web, les concurrents se définissent comme étant les sites qui obtiennent un trafic supérieur à votre site web. Les résultats de nos analyses vous seront présentés dans un rapport écrit et diffusé en ligne lors d’une conférence privée de 60 minutes par téléphone ou Skype.</p>
+                            </div>
+                        </div>
+                        <div class="fleft fpara">
+                               <h3 class="sv_titile">Forfait sur demande 339 $ par mois</h3>
+                               <div class="sv_about">
+                                   <p class="f12">Le forfait sur demande comprend les éléments du forfait intermédiaire avec un accompagnement personnalisé sur une période s’échelonnant entre 6 et 12 mois. Notre accompagnement comprend également le développement d’une stratégie marketing web intégré couvrant à la fois le web, les réseaux sociaux et l’identification de tactiques à mettre en place pour améliorer le référencement de votre site web. </p>
+                            </div>
+                        </div>
+
+
+
+    <!-- Pricing Table Section -->
+        <section id="pricing-table">
+            <div class="container">
+                <div class="row">
+                    <div class="pricing">
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <p class="pricing-title">Forfait <br>   de base</p>
+                                    <p class="pricing-rate">199 <sup>$</sup><span>+ taxes</span></p>
+                                    <a href="#" class="btn btn-custom">Acheter maintenant</a>
+                                </div>
+
+                                <div class="pricing-list text-center">
+                                    <ul>
+                                        <li><span>SEO</span></li>
+                                        <li><span>Mobile</span></li>
+                                        <li><span>Facebook</span></li>
+                                        <br> <br>Renseignements additionnels:<a href="demandecsm@globetrotter.net"> demandecsm@globetrotter.net</i></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <p class="pricing-title">Forfait intermédiaire</p>
+                                    <p class="pricing-rate">1199 <sup>$</sup><span>+ taxes</span></p>
+                                    <a href="#" class="btn btn-custom">Acheter maintenant</a>
+                                </div>
+
+                                <div class="pricing-list text-center">
+                                    <ul>
+                                        <li><i class="fa fa-plus"></i>Audit web de base plus</li>
+                                        <li><span>Réseaux sociaux (Twitter, Pinterest,  etc.)</span> </li>
+                                        <li><span>Évaluation du trafic</span> </li>
+                                        <li><span>Recherche de 5 mots clés pertinents</span></li>
+                                        <li><span>Analyse de 3 sites concurrents</span></li>
+                                        <li><span>Rapport écrit</span></li>
+                                        <li><span>Diffusion des résultats lors du conférence téléphonique ou via Skype</span></li>
+                                        <br> <br>Renseignements additionnels:<a href="demandecsm@globetrotter.net"> demandecsm@globetrotter.net</i></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <p class="pricing-title">Forfait sur demande</p>
+                                    <p class="pricing-rate">199 <sup>$</sup><span>+ taxes</span></p>
+                                    <a href="#" class="btn btn-custom">Acheter maintenant</a>
+                                </div>
+
+                                <div class="pricing-list text-center">
+                                    <ul>
+                                        <li><i class="fa fa-plus"></i>Audit web intermédiaire, plus</li>
+                                        <li><span>Développement d’une stratégie webmarketing
+
+                                        <li><span>Identification de ressources pour réalisation de services spécialisés (vidéo, refonte du site web, développement d’outils  ou de plateforme de contenu).</span></li>
+                                        <li><span>Production d’un calendrier d’activités visant à créer une synergie entre vos différents canaux de communication</span> </li>
+                                        <li><span>CSM Conseil marketing web assure la coordination et le suivi des étapes de production</span></li>
+                                        <br> <br>Renseignements additionnels:<a href="demandecsm@globetrotter.net"> demandecsm@globetrotter.net</i></a>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include 'calltoaction.html' %}
+
+{% endblock content %}
